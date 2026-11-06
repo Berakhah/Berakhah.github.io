@@ -1,0 +1,8 @@
+{
+  "_note": "Single source for prices shown on the site. Keep in step with the Upwork Project Catalog listing. Run: python3 scripts/check_prices.py",
+  "currency": "USD",
+  "from": 249,
+  "starter": 249,
+  "standard": 595,
+  "advanced": 1190
+}
