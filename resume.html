@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 <title>Résumé — Bereket Tilahun</title>
-<meta name="description" content="Résumé of Bereket Tilahun, Backend Security Engineer. Download the PDF.">
+<meta name="description" content="Résumé of Bereket Tilahun, Senior Software Engineer at DZ Software Engineering, Addis Ababa: backend and application security. PDF available.">
 <meta name="author" content="Bereket Tilahun">
 <meta property="og:title" content="Résumé — Bereket Tilahun">
-<meta property="og:description" content="Résumé of Bereket Tilahun, Backend Security Engineer. Download the PDF.">
+<meta property="og:description" content="Résumé of Bereket Tilahun, Senior Software Engineer at DZ Software Engineering, Addis Ababa: backend and application security. PDF available.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Bereket Tilahun — Backend Security Engineer">
 <meta property="og:url" content="https://berakhah.github.io/resume.html">
@@ -16,7 +16,7 @@
 <meta name="twitter:image" content="https://berakhah.github.io/assets/img/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Résumé — Bereket Tilahun">
-<meta name="twitter:description" content="Résumé of Bereket Tilahun, Backend Security Engineer. Download the PDF.">
+<meta name="twitter:description" content="Résumé of Bereket Tilahun, Senior Software Engineer at DZ Software Engineering, Addis Ababa: backend and application security. PDF available.">
 <meta name="theme-color" content="#f4f1ea">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
@@ -497,6 +497,22 @@ html.drawer-open { overflow: hidden; }
   .resume-body { max-width: none; gap: 1.5rem; }
   .resume-role { break-inside: avoid; }
   a { color: inherit; }
+  .print-only { display: block !important; }
+  .wrap { max-width: none !important; padding-inline: 0 !important; }
+  .resume-hero { padding-block: 0 .75rem !important; }
+  .resume-hero .wrap { gap: .5rem !important; }
+  .resume-hero .cs-title { font-size: 2.1rem !important; max-width: none !important; }
+  .resume-hero .cs-tagline { font-size: 1rem !important; }
+  .resume-hero .cs-plain { font-size: .85rem !important; max-width: none !important; }
+  .resume-body { gap: .9rem !important; font-size: .82rem; }
+  .resume-role { break-inside: auto !important; padding-top: .6rem !important; }
+  .resume-role-head, .resume-points li, .stack-run { break-inside: avoid; }
+  .resume-title { font-size: 1.15rem !important; }
+  .resume-body, .resume-points, .resume-org, .stack-items { max-width: none !important; }
+  .resume-points { gap: .2rem !important; margin-top: .3rem !important; }
+  .resume-points li, .stack-items, .resume-org { line-height: 1.4 !important; margin-block: 0 !important; }
+  .stack-run { padding-block: .3rem !important; }
+  .resume-hero .eyebrow { display: none !important; }
 }
 
 /* --------------------------------------------------------------------- 404 */
@@ -563,25 +579,33 @@ html.drawer-open { overflow: hidden; }
     <p class="cs-tagline rv" style="--d:120ms">Backend Security Engineer · Addis Ababa, Ethiopia</p>
     <div class="resume-ctas rv" style="--d:180ms">
       <a class="btn btn-signal" href="https://www.upwork.com/freelancers/~01645da719eb4829ed" rel="noopener" target="_blank">Hire me on Upwork <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+      <a class="btn btn-ink" href="/assets/bereket-tilahun-resume.pdf" download>Download PDF <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></a>
     </div>
+    <p class="cs-plain rv" style="--d:220ms">Fixed-price security reviews for AI-built Supabase, Next.js and Stripe apps on Upwork. Also open to full-time or contract backend and application-security roles, remote or Addis Ababa.</p>
+    <p class="print-only mono" style="display:none;font-size:.8rem">berakhah.github.io · github.com/Berakhah · upwork.com/freelancers/~01645da719eb4829ed</p>
   </div>
 </section>
 <div class="wrap resume-body">
   <section class="resume-role rv" aria-labelledby="rr0">
-    <div class="resume-role-head"><h2 class="resume-title" id="rr0">Senior Software Engineer</h2><span class="resume-range mono">Jul 2023 – Present</span></div>
+    <div class="resume-role-head"><h2 class="resume-title" id="rr0">Senior Software Engineer</h2><span class="resume-range mono">May 2026 – Present</span></div>
     <p class="resume-org">DZ Software Engineering PLC · Addis Ababa, Ethiopia</p>
-    <p class="resume-org">Promoted from Junior Software Engineer after 16 months. Completed my BSc in Computer Science at HiLCoE alongside this role.</p>
-    <ul class="bullets resume-points"><li>Built and operated 15 containerized backend services on FastAPI and Django REST, shipping through CI/CD; layered Redis caching (84% hit rate) to drop p95 latency from 340ms to 195ms at 420 req/min peak.</li><li>Architected an LLM evaluation pipeline and CI gate benchmarking correctness, reliability and runtime across Python, JavaScript, Java, C++ and Rust submissions — rolled out as an automated quality gate on 11 production services, cutting manual review by 40% with zero correctness regressions since launch.</li><li>Designed an automated benchmark curation pipeline over PostgreSQL telemetry and Redis event streams, reducing MTTD by 30% and producing 1,200+ labeled records for fine-tuning.</li><li>Hardened 47 API endpoints with schema-enforced validation, parameterized queries, rate limiting and Bandit/pip-audit pre-merge gates — closing 9 High/Critical CVEs with no recurrence in the cycles that followed.</li><li>Led a Zero Trust migration: replaced 11 long-lived secrets with short-lived, scope-limited OIDC tokens, made Trivy image scans a hard deploy gate, and stood up an append-only audit pipeline — dropping incident reconstruction to under 20 minutes with zero auth-related production incidents to date.</li><li>Deployed evaluation services on AWS (EC2, S3, IAM role-scoped access, VPC-isolated mesh) behind load-balanced ingress, achieving environment parity across 11 staging/production pairs and reducing rollback time by 35%.</li></ul>
-  </section><section class="resume-role rv" aria-labelledby="rr1">
-    <div class="resume-role-head"><h2 class="resume-title" id="rr1">Junior Software Engineer</h2><span class="resume-range mono">Mar 2022 – Jun 2023</span></div>
+    <p class="resume-org">Promoted to Senior in May 2026; part-time since August 2026.</p>
+  </section>  <section class="resume-role rv" aria-labelledby="rr1">
+    <div class="resume-role-head"><h2 class="resume-title" id="rr1">Software Engineer</h2><span class="resume-range mono">Jul 2023 – Apr 2026</span></div>
     <p class="resume-org">DZ Software Engineering PLC · Addis Ababa, Ethiopia</p>
-    
+    <p class="resume-org">Completed my BSc in Computer Science at HiLCoE alongside this role.</p>
+    <ul class="bullets resume-points"><li>Built and operated 15 containerized backend services on FastAPI and Django REST, shipping through CI/CD; layered Redis caching (84% hit rate) to drop p95 latency from 340ms to 195ms at 420 req/min peak.</li><li>Architected an LLM evaluation pipeline and CI gate benchmarking correctness, reliability and runtime across Python, JavaScript, Java, C++ and Rust submissions — rolled out as an automated quality gate on 11 production services, cutting manual review by 40% with zero correctness regressions since launch.</li><li>Designed an automated benchmark curation pipeline over PostgreSQL telemetry and Redis event streams, reducing MTTD by 30% and producing 1,200+ labeled records for fine-tuning.</li><li>Hardened 47 API endpoints with schema-enforced validation, parameterized queries, rate limiting and Bandit/pip-audit pre-merge gates, closing 9 High/Critical findings from internal reviews and dependency scans with no recurrence.</li><li>Replaced 11 long-lived secrets with short-lived, scope-limited OIDC tokens, made Trivy image scans a hard deploy gate, and stood up an append-only audit pipeline; incident reconstruction now takes under 20 minutes.</li><li>Deployed evaluation services on AWS (EC2, S3, IAM role-scoped access, VPC-isolated mesh) behind load-balanced ingress, achieving environment parity across 11 staging/production pairs and reducing rollback time by 35%.</li></ul>
+  </section>  <section class="resume-role rv" aria-labelledby="rr2">
+    <div class="resume-role-head"><h2 class="resume-title" id="rr2">Full Stack Developer</h2><span class="resume-range mono">Mar 2022 – Jun 2023</span></div>
+    <p class="resume-org">DZ Software Engineering PLC · Addis Ababa, Ethiopia</p>
     <ul class="bullets resume-points"><li>Triaged 10–12 Tier 1 incidents daily across Python, Java and C++ services; authored runbooks and automated recurring health checks, cutting recurring failures by 15% across enterprise environments.</li><li>Diagnosed and resolved OS, network and distributed-service failures end-to-end, establishing observability baselines that were later adopted across 3 production environments.</li></ul>
-  </section><section class="resume-role rv" aria-labelledby="rr2">
-    <div class="resume-role-head"><h2 class="resume-title" id="rr2">Freelance Backend Engineer (part-time)</h2><span class="resume-range mono">Mar 2021 – Jun 2023</span></div>
-    <p class="resume-org">Remote (Independent) · Addis Ababa, Ethiopia</p>
-    <p class="resume-org">Client work I took on before joining DZ, and continued part-time alongside it until mid-2023.</p>
-    <ul class="bullets resume-points"><li>Shipped 15+ production backend systems spanning AI evaluation, collaboration and security on FastAPI, Django REST and Spring Boot, with React/Node.js frontends — serving 100+ concurrent users at sub-200ms API targets.</li><li>Engineered a multilingual code search backend with BM25 and TF-IDF retrieval; enforced authorization-before-query checks to neutralize timing-oracle attacks and applied AES-256 tenant-scoped encryption at rest.</li><li>Built a distributed real-time evaluation platform using PostgreSQL row-level optimistic locking, async Python orchestration and a WebSocket notification layer — hitting a 79% cache hit rate and pulling p95 latency from 210ms down to 48ms under 85 concurrent connections.</li><li>Designed an agent-assisted evaluation pipeline using async Python workers and LLM-generated test scaffolds across 12 services, lifting throughput by 18%.</li><li>Folded correctness scoring, latency profiling and reliability checks into a unified CI/CD-gated pipeline, eliminating manual handoffs between frontend, API and backend stages.</li></ul>
+  </section>  <section class="resume-role rv" aria-labelledby="rr3">
+    <div class="resume-role-head"><h2 class="resume-title" id="rr3">Freelance Backend Engineer (part-time)</h2><span class="resume-range mono">Mar 2021 – Jun 2023</span></div>
+    <p class="resume-org">Independent, for individual organizations · Remote</p>
+    <p class="resume-org">Part-time backend work before and alongside DZ, until mid-2023.</p>
+    <ul class="bullets resume-points"><li>Built backends on FastAPI, Django REST and Spring Boot, with React/Node.js frontends.</li><li>Engineered a multilingual code search backend with BM25 and TF-IDF retrieval; enforced authorization-before-query checks to neutralize timing-oracle attacks and applied AES-256 tenant-scoped encryption at rest.</li><li>Folded correctness scoring, latency profiling and reliability checks into a unified CI/CD-gated pipeline, eliminating manual handoffs between frontend, API and backend stages.</li></ul>
+  </section>  <section class="resume-role rv"><h2 class="resume-title">Projects</h2>
+    <ul class="bullets resume-points"><li><a href="/work/shopfast-demo.html" style="display:inline-block;padding-block:.15rem"><strong>ShopFast sample audit</strong></a> (2026, demo, not client work): a demo store with 8 planted flaws (3 Critical, 2 High, 3 Medium), all 8 proven in a live run and 6 re-proven by one command, each with its fix.</li><li><a href="/work/agent-perimeter.html" style="display:inline-block;padding-block:.15rem"><strong>Agent Perimeter</strong></a> (2026, open source, Apache-2.0): security scanner for MCP servers and AI agents; 34 checks in 8 groups, 940 test functions, and a census of 31,953 MCP Registry entries.</li></ul>
   </section>
   <section class="resume-role rv"><h2 class="resume-title">Skills</h2>
     <div class="stack-runs"><div class="stack-run"><p class="stack-h">Backend</p><p class="stack-items">Python 3.12 · FastAPI · Django REST · Spring Boot · Pydantic v2 · SQLAlchemy 2 + Alembic · PostgreSQL · async workers · event-driven pipelines · Typer CLI</p></div><div class="stack-run"><p class="stack-h">Security</p><p class="stack-items">Zero Trust · OIDC / Keycloak · JWT &amp; token lifecycle · RBAC / ABAC · OWASP Top 10 · threat modeling · SARIF 2.1.0 · envelope encryption · Argon2 · seccomp profiles · HMAC · Bandit / pip-audit · Trivy · gitleaks</p></div><div class="stack-run"><p class="stack-h">Data</p><p class="stack-items">Redis · DuckDB · SQLite · Parquet · NumPy / SciPy / scikit-learn · BM25 / TF-IDF · pdfplumber · pypdfium2 · RapidOCR</p></div><div class="stack-run"><p class="stack-h">Infrastructure</p><p class="stack-items">Docker &amp; Compose · GitHub Actions · AWS (EC2, S3, IAM, VPC) · Linux · structlog · Prometheus · multi-stage builds · CI/CD gates</p></div><div class="stack-run"><p class="stack-h">AI &amp; Evaluation</p><p class="stack-items">LLM evaluation pipelines · cluster-BCa bootstrap intervals · Cohen’s κ · Krippendorff’s α · Benjamini–Hochberg · O’Brien–Fleming sequential testing · isotonic / Platt calibration · LLM-as-judge bias controls · hypothesis property testing</p></div></div>
