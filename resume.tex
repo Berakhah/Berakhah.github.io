@@ -1,0 +1,128 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.45in,top=0.35in,bottom=0.35in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{ragged2e}
+
+\definecolor{accent}{HTML}{1F3A5F}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{0.95}
+
+% Section headings
+\titleformat{\section}{\color{accent}\bfseries\large\scshape}{}{0em}{}[\vspace{-6pt}\color{accent}\rule{\linewidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
+
+% Bullet lists
+\setlist[itemize]{leftmargin=1.1em,itemsep=0.5pt,parsep=0pt,topsep=1pt,label=\textbullet}
+
+\newcommand{\sep}{\,\textperiodcentered\,}
+
+% Role: title, dates / org line
+\newcommand{\role}[3]{%
+  \textbf{#1}\hfill{\small #2}\\
+  {\small\itshape #3}\par\vspace{1pt}}
+
+% Note line under a role
+\newcommand{\note}[1]{{\small #1}\par}
+
+\begin{document}
+\fontsize{9.5}{11.1}\selectfont
+
+% ---------------- Header ----------------
+% Canonical source: facts.md. DZ section is PENDING the signed DZ letter.
+\begin{center}
+  {\LARGE\bfseries\color{accent} Bereket Tilahun}\\[2pt]
+  {\large Backend and security engineer \sep Addis Ababa, Ethiopia}\\[1pt]
+  {\small Fixed-price security reviews of Supabase, Next.js and Stripe apps on Upwork. Open to full-time or
+  contract backend and application-security roles, remote or Addis Ababa.}\\[1pt]
+  {\small
+  \href{https://berakhah.github.io}{berakhah.github.io} \sep
+  \href{https://github.com/Berakhah}{github.com/Berakhah} \sep
+  \href{https://www.linkedin.com/in/berekettilahun}{linkedin.com/in/berekettilahun} \sep
+  \href{https://upwork.com/freelancers/~01645da719eb4829ed}{Upwork profile}}
+\end{center}
+\vspace{-8pt}
+
+% ---------------- Experience ----------------
+\section{Experience}
+
+\role{Senior Software Engineer}{May 2026 -- Present}{DZ Software Engineering PLC \sep Addis Ababa, Ethiopia}
+\note{Promoted in May 2026. Part-time (20 hours a week) since August 2026.}
+\vspace{2pt}
+
+\role{Software Engineer}{Jul 2023 -- Apr 2026}{DZ Software Engineering PLC \sep Addis Ababa, Ethiopia}
+\note{Main backend developer on DZ's 15-service platform (FastAPI, Django REST, Docker) from July 2023.}
+\begin{itemize}
+  \item Added Redis caching to the platform's services; p95 latency fell from 340\,ms to 195\,ms.
+  \item Built an LLM evaluation pipeline that runs as an automated quality gate on 11 production services,
+  which cut manual review effort by 40\%.
+  \item Built a benchmark-curation pipeline over PostgreSQL telemetry and Redis event streams that cut mean
+  time to detect model-quality regressions by 30\%.
+  \item Hardened 47 API endpoints with schema validation, parameterized queries, rate limits and
+  Bandit/pip-audit checks before merge.
+  \item Replaced 11 long-lived secrets with short-lived, scope-limited OIDC tokens and made Trivy image
+  scans a blocking deploy step.
+  \item Deployed evaluation services on AWS (EC2, S3, role-scoped IAM, VPC) behind a load balancer;
+  rollback time fell 35\%.
+\end{itemize}
+\vspace{1pt}
+
+\role{Full Stack Developer}{Mar 2022 -- Jun 2023}{DZ Software Engineering PLC \sep Addis Ababa, Ethiopia}
+\begin{itemize}
+  \item Triaged production incidents across Python, Java and C++ services and wrote runbooks for the
+  ones that kept coming back.
+  \item Automated recurring health checks and set up observability baselines for
+  the services I supported.
+\end{itemize}
+\vspace{1pt}
+
+\role{Freelance Backend Engineer (part-time)}{Mar 2021 -- Jun 2023}{Independent, for small organizations \sep Remote}
+\begin{itemize}
+  \item Built backends with FastAPI, Django REST and Spring Boot.
+\end{itemize}
+
+% ---------------- Projects ----------------
+\section{Projects}
+{\small Personal projects, 2026. I design them and direct AI coding agents (Claude Code) that write much of
+the code; I review and test it. Each repo says how it was built and what isn't finished.}
+\begin{itemize}
+  \item \textbf{ShopFast sample audit} (demo, not client work): a Next.js + Supabase + Stripe store with
+  8 planted flaws, each proven and paired with its fix.
+  \item \textbf{Agent Perimeter} (Apache-2.0): security scanner for MCP servers and AI agents with 34 checks
+  and a passive census of 31,953 MCP Registry entries.
+  \item \textbf{Ledger Sense} (Apache-2.0): checks construction pay applications before payment. My own
+  audit of it recorded 34 findings; I reproduced and fixed the Critical one.
+\end{itemize}
+
+% ---------------- Skills ----------------
+\section{Skills}
+{\small\hyphenpenalty=10000\exhyphenpenalty=10000
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight}p{2.85cm}>{\RaggedRight\arraybackslash}X@{}}
+\textbf{Backend} & Python 3.12 \sep FastAPI \sep Django REST \sep Spring Boot \sep Pydantic v2 \sep SQLAlchemy 2 + Alembic \sep
+PostgreSQL \sep Redis \sep Typer CLI \\[1pt]
+\textbf{App security} & Supabase RLS and Postgres policies (ShopFast) \sep Stripe webhook and checkout checks (ShopFast) \sep
+OIDC / Keycloak, JWT (DZ, AZTDP) \sep RBAC \sep OWASP Top 10 \sep threat modeling \sep SARIF 2.1.0 \sep Argon2 \sep
+Bandit / pip-audit \sep Trivy \sep gitleaks \\[1pt]
+\textbf{Web} & Next.js and TypeScript (ShopFast, Agent Perimeter UI) \sep React \\[1pt]
+\textbf{Infrastructure} & Docker \& Compose \sep GitHub Actions \sep AWS (EC2, S3, IAM, VPC) \sep Linux \sep Prometheus \sep CI/CD gates \\[1pt]
+\textbf{Evaluation} & LLM evaluation pipelines \sep bootstrap confidence intervals \sep judge agreement (Cohen's $\kappa$) \sep
+property-based testing (Hypothesis) \\
+\end{tabularx}
+}
+
+% ---------------- Education ----------------
+\section{Education}
+\textbf{B.Sc. Computer Science}, HiLCoE School of Computer Science \& Technology, Addis Ababa \hfill{\small Jan 2021 -- Jul 2026}\\
+{\small Part-time study, alongside freelance work (2021--2023) and my job at DZ (from March 2022).}
+
+\end{document}
