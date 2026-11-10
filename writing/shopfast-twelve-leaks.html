@@ -535,6 +535,12 @@ html.drawer-open { overflow: hidden; }
 .post-item h2 { font-family: var(--serif); font-weight: 500; font-size: var(--fs-3); line-height: 1.1; letter-spacing: -.01em; }
 .post-item h2 a:hover { color: var(--signal); }
 
+/* Demo video (case study hero + write-up) */
+.demo-video { margin: 2.5rem 0 0; }
+.demo-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 12px; background: var(--paper-2); border: 1px solid var(--hair); }
+.demo-video figcaption { margin-top: .75rem; font-size: var(--fs--1); color: var(--muted); max-width: 70ch; }
+.post-body .demo-video, .demo-video.post-demo { margin: 2rem 0; }
+
 /* Every hidden-until-revealed state lives under .motion (set by main.js
    only when GSAP loaded and reduced motion is off). Without it the site is
    fully visible and static. */
@@ -584,7 +590,7 @@ html.drawer-open { overflow: hidden; }
       <a href="/writing/">Writing</a>
       <a href="https://www.upwork.com/freelancers/~01645da719eb4829ed" rel="noopener" target="_blank">Upwork</a>
       <a href="https://github.com/Berakhah" rel="noopener" target="_blank">GitHub</a>
-      
+      <a href="https://www.linkedin.com/in/berekettilahun" rel="noopener" target="_blank">LinkedIn</a>
       
     </nav>
   </div>
@@ -603,6 +609,14 @@ html.drawer-open { overflow: hidden; }
   <div class="wrap post-wrap post-body">
 <p class="post-lede">I built a small Supabase and Stripe store the way AI coding tools tend to build one, then audited it. Twelve flaws. With an account anyone can create, a customer can read other customers' addresses and orders, pay 50 cents for a $49 shoe, or get the support bot to read out someone else's order.</p>
 <p>Each finding below has a proof you can rerun. Ten run in CI on every push; the other two take one command each. They group into four mistakes, and the first one accounts for a third of them.</p>
+
+<figure class="demo-video post-demo" id="demo">
+  <video controls playsinline preload="metadata" poster="/assets/video/shopfast-demo-poster.jpg" width="1920" height="1080">
+    <source src="/assets/video/shopfast-demo.mp4" type="video/mp4">
+    <a href="/assets/video/shopfast-demo.mp4">Download the walkthrough (MP4)</a>
+  </video>
+  <figcaption>Walkthrough, 1:42: all twelve findings replayed, then the run telemetry, the findings ledger and the fix roadmap.</figcaption>
+</figure>
 
 <section class="post-sec" id="method">
 <h2>Method</h2>
@@ -698,7 +712,7 @@ BASE=http://localhost:3000 bash poc/sf08.sh</code></pre>
     <nav class="foot-links" aria-label="Footer">
       <a href="https://www.upwork.com/freelancers/~01645da719eb4829ed" rel="noopener" target="_blank">Upwork</a>
       <a href="https://github.com/Berakhah" rel="noopener" target="_blank">GitHub</a>
-      
+      <a href="https://www.linkedin.com/in/berekettilahun" rel="noopener" target="_blank">LinkedIn</a>
       
       <a href="/resume.html">Résumé</a>
     </nav>
