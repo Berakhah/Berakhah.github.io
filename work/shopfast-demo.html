@@ -503,6 +503,44 @@ html.drawer-open { overflow: hidden; }
 .nf { min-height: 60vh; display: grid; align-content: center; gap: 1rem; }
 .nf-h { font-family: var(--serif); font-weight: 500; font-size: var(--fs-hero); letter-spacing: -.03em; line-height: .95; }
 
+/* ---------------------------------------------------------------- writing */
+.post-wrap { max-width: 44rem; }
+.post-hero { padding-block: clamp(2rem, 6vw, 5rem) clamp(1.5rem, 4vw, 3rem); border-bottom: 1px solid var(--ink); }
+.post-hero .wrap { display: grid; gap: 1rem; }
+.post-title { font-family: var(--serif); font-weight: 500; font-size: var(--fs-title); line-height: 1.05; letter-spacing: -.02em; }
+.post-dek { font-family: var(--serif); font-style: italic; font-size: var(--fs-2); line-height: 1.3; color: var(--muted); }
+.post-draft { padding: .75rem 1rem; border: 1px solid var(--signal); border-radius: 8px; font-size: var(--fs--1); }
+.post-body { display: grid; gap: 1.5rem; padding-block: clamp(2rem, 5vw, 3.5rem) var(--sect); overflow-wrap: anywhere; }
+.post-lede { font-size: var(--fs-2); line-height: 1.35; }
+.post-sec { display: grid; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--hair); }
+.post-sec h2 { font-family: var(--serif); font-weight: 500; font-size: var(--fs-3); letter-spacing: -.01em; line-height: 1.1; }
+.post-sec h3 { font-weight: 600; font-size: var(--fs-1); margin-top: .5rem; }
+.post-body ul, .post-body ol { display: grid; gap: .6rem; padding-left: 1.25rem; }
+.post-body ul { list-style: disc; }
+.post-body ol { list-style: decimal; }
+.post-body li::marker { color: var(--muted); }
+.post-body a:not(.btn) { text-decoration: underline; text-underline-offset: .15em; }
+.post-body code { background: var(--paper-2); border-radius: 4px; padding: .05em .3em; }
+.post-body pre { background: var(--paper-2); border-radius: 12px; padding: 1rem 1.25rem; overflow-x: auto; font-size: .8rem; line-height: 1.55; }
+.post-body pre code { background: none; padding: 0; }
+.post-table { overflow-x: auto; }
+.post-table table { border-collapse: collapse; width: 100%; font-size: var(--fs--1); font-variant-numeric: tabular-nums; }
+.post-table th, .post-table td { text-align: left; padding: .5rem .75rem .5rem 0; border-bottom: 1px solid var(--hair); white-space: nowrap; }
+.post-table th { font-weight: 500; color: var(--muted); }
+.post-note { font-size: var(--fs--1); color: var(--muted); padding-top: 1.5rem; border-top: 1px solid var(--hair); }
+.post-cta { display: grid; gap: 1rem; justify-items: start; padding: 1.5rem; background: var(--paper-2); border-radius: 12px; }
+.post-back { font-size: var(--fs--1); }
+.post-list { display: grid; gap: 2rem; padding-block: 2rem var(--sect); }
+.post-item { display: grid; gap: .5rem; padding-top: 1.5rem; border-top: 1px solid var(--hair); }
+.post-item h2 { font-family: var(--serif); font-weight: 500; font-size: var(--fs-3); line-height: 1.1; letter-spacing: -.01em; }
+.post-item h2 a:hover { color: var(--signal); }
+
+/* Demo video (case study hero + write-up) */
+.demo-video { margin: 2.5rem 0 0; }
+.demo-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 12px; background: var(--paper-2); border: 1px solid var(--hair); }
+.demo-video figcaption { margin-top: .75rem; font-size: var(--fs--1); color: var(--muted); max-width: 70ch; }
+.post-body .demo-video, .demo-video.post-demo { margin: 2rem 0; }
+
 /* Every hidden-until-revealed state lives under .motion (set by main.js
    only when GSAP loaded and reduced motion is off). Without it the site is
    fully visible and static. */
@@ -572,6 +610,13 @@ html.drawer-open { overflow: hidden; }
       <a class="text-link" href="https://github.com/Berakhah/shopfast-demo" rel="noopener" target="_blank">GitHub <svg class="icon icon-xs" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9M18 13v6H5V6h6"/></svg></a>
     </div>
     <div class="cs-tech rv" style="--d:360ms"><span class="chip">Next.js 14</span><span class="chip">Supabase</span><span class="chip">PostgreSQL RLS</span><span class="chip">Stripe</span><span class="chip">OpenAI API</span><span class="chip">Node.js</span><span class="chip">CVSS 3.1</span><span class="chip">Bash</span></div>
+    <figure class="demo-video cs-demo rv" id="demo">
+  <video controls playsinline preload="metadata" poster="/assets/video/shopfast-demo-poster.jpg" width="1920" height="1080">
+    <source src="/assets/video/shopfast-demo.mp4" type="video/mp4">
+    <a href="/assets/video/shopfast-demo.mp4">Download the walkthrough (MP4)</a>
+  </video>
+  <figcaption>Walkthrough, 1:42: all twelve findings replayed in the attack console, then the run telemetry, the findings ledger and the fix roadmap. Captions on screen, no voiceover.</figcaption>
+</figure>
   </div>
 </section>
 
