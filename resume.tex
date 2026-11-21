@@ -1,177 +1,126 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[10pt,letterpaper]{article}
 
-\usepackage{enumitem}  
-\usepackage{setspace}   
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.45in,top=0.35in,bottom=0.35in]{geometry}
 \usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
-\input{glyphtounicode}
+\usepackage{array}
+\usepackage{ragged2e}
 
-%----------FONT SETTINGS----------
-\usepackage[default,scale=0.9]{opensans} 
+\definecolor{accent}{HTML}{1F3A5F}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{0.95}
 
-% This command makes all \textbf commands use "Semibold" instead of "Bold"
-\renewcommand{\bfdefault}{sb} 
+% Section headings
+\titleformat{\section}{\color{accent}\bfseries\large\scshape}{}{0em}{}[\vspace{-6pt}\color{accent}\rule{\linewidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
 
-\pagestyle{fancy}
-\fancyhf{} 
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+% Bullet lists
+\setlist[itemize]{leftmargin=1.1em,itemsep=0.5pt,parsep=0pt,topsep=1pt,label=\textbullet}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+\newcommand{\sep}{\,\textperiodcentered\,}
 
-\urlstyle{same}
+% Role: title, dates / org line
+\newcommand{\role}[3]{%
+  \textbf{#1}\hfill{\small #2}\\
+  {\small\itshape #3}\par\vspace{1pt}}
 
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%----------BULLET POINT SETTINGS----------
-\setlist[itemize]{itemsep=2pt, topsep=6pt, parsep=0pt, partopsep=0pt}
-\renewcommand\labelitemi{\small\textbullet} 
-\renewcommand\labelitemii{\small\textbullet}
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2.5pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-0.01pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-
-% Web copy for berakhah.github.io: same as the PDF résumé, without the phone number.
-% /resume.html is generated from this file by make_resume_html.py.
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Note line under a role
+\newcommand{\note}[1]{{\small #1}\par}
 
 \begin{document}
+\fontsize{9.5}{11.1}\selectfont
 
-%----------HEADING----------
+% ---------------- Header ----------------
+% Canonical source: facts.md. DZ section is PENDING the signed DZ letter.
 \begin{center}
-    {\LARGE \scshape BEREKET TILAHUN} \\ \vspace{2pt}
-    {\small Backend Engineer --- AI Agents, LLM Systems \& Secure Integrations \textbar{} Addis Ababa, Ethiopia (UTC+3) \textbar{} Open to remote} \\ \vspace{2pt}
-    \small
-    \mbox{\href{mailto:berekettilahun77@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{berekettilahun77@gmail.com}}} ~
-    \mbox{\href{https://www.linkedin.com/in/berekettilahun}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/berekettilahun}}} ~
-    \mbox{\href{https://github.com/Berakhah}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/Berakhah}}} ~
-    \mbox{\href{https://berakhah.github.io}{\raisebox{-0.2\height}\faGlobe\ \underline{berakhah.github.io}}}
-    \vspace{-8pt}
+  {\LARGE\bfseries\color{accent} Bereket Tilahun}\\[2pt]
+  {\large Backend and security engineer \sep Addis Ababa, Ethiopia}\\[1pt]
+  {\small Fixed-price security reviews of Supabase, Next.js and Stripe apps on Upwork. Open to
+  contract backend and application-security roles, remote or Addis Ababa.}\\[1pt]
+  {\small
+  \href{https://berakhah.github.io}{berakhah.github.io} \sep
+  \href{https://github.com/Berakhah}{github.com/Berakhah} \sep
+  \href{https://upwork.com/freelancers/~01645da719eb4829ed}{Upwork profile}}
 \end{center}
+\vspace{-8pt}
 
-%-----------EXPERIENCE-----------
+% ---------------- Experience ----------------
 \section{Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Senior Software Engineer}{May 2026 -- Present}
-      {DZ Software Engineering PLC}{Addis Ababa, Ethiopia}
-      \resumeItemListStart
-        \item[]\small{Promoted in May 2026; part-time since August 2026.}
-      \resumeItemListEnd
 
-    \resumeSubheading
-      {Software Engineer}{Jul 2023 -- Apr 2026}
-      {DZ Software Engineering PLC}{Addis Ababa, Ethiopia}
-      \resumeItemListStart
-        \resumeItem{Hardened \textbf{47 API endpoints} (schema validation, parameterized queries, rate limiting, \textbf{Bandit}/\textbf{pip-audit} gates); closed \textbf{9 High/Critical} findings from reviews and dependency scans.}
-        \resumeItem{\textbf{Led a Zero Trust migration} to \textbf{Keycloak}, moving services one at a time: replaced \textbf{11 long-lived secrets} with 5-minute, audience-scoped \textbf{OIDC} tokens via token exchange.}
-        \resumeItem{Made \textbf{Trivy} image scans a hard deploy gate and built an \textbf{append-only audit pipeline}; incident reconstruction now takes \textbf{under 20 minutes}.}
-        \resumeItem{Built and operated a \textbf{15-service} async Python platform on \textbf{FastAPI} and \textbf{Django REST}; added \textbf{Redis caching} (84\% hit rate) that cut p95 latency from \textbf{340\,ms to 195\,ms} at 420 req/min peak.}
-        \resumeItem{\textbf{Architected an LLM evaluation pipeline} and CI gate that scores code submissions on correctness, reliability and runtime across \textbf{Python, JavaScript, Java, C++ and Rust}; runs as an automated quality gate on \textbf{11 production services} and cut manual review time by \textbf{40\%}.}
-        \resumeItem{Designed an \textbf{automated benchmark-curation pipeline} over \textbf{PostgreSQL} telemetry and \textbf{Redis} event streams, producing \textbf{1,200+ labeled records} for fine-tuning and cutting mean time to detect model-quality regressions by \textbf{30\%}.}
-        \resumeItem{Deployed LLM evaluation services on \textbf{AWS} (EC2, S3, role-scoped IAM, VPC isolation) across \textbf{11 staging/production pairs}; rollback time fell \textbf{35\%}.}
-      \resumeItemListEnd
+\role{Senior Software Engineer}{May 2026 -- Present}{DZ Software Engineering PLC \sep Addis Ababa, Ethiopia}
+\note{Promoted in May 2026. Part-time (20 hours a week) since August 2026.}
+\vspace{2pt}
 
-    \resumeSubheading
-      {Full Stack Developer}{Mar 2022 -- Jun 2023}
-      {DZ Software Engineering PLC}{Addis Ababa, Ethiopia}
-      \resumeItemListStart
-        \resumeItem{Triaged \textbf{10--12 Tier-1 incidents daily} across Python, Java and C++ services; wrote runbooks and automated health checks that cut recurring failures by \textbf{15\%}.}
-        \resumeItem{Scanned \textbf{10+ production Linux hosts} with \textbf{OpenSCAP} and fixed \textbf{23 misconfigurations}, including credential backup files readable by every user.}
-        \resumeItem{Set observability baselines (\textbf{Prometheus/Grafana}, ELK, Zabbix) later adopted in \textbf{3 production environments}.}
-      \resumeItemListEnd
+\role{Software Engineer}{Jul 2023 -- Apr 2026}{DZ Software Engineering PLC \sep Addis Ababa, Ethiopia}
+\note{Main backend developer on DZ's 15-service platform (FastAPI, Django REST, Docker) from July 2023.}
+\begin{itemize}
+  \item Added Redis caching to the platform's services; p95 latency fell from 340\,ms to 195\,ms.
+  \item Built an LLM evaluation pipeline that runs as an automated quality gate on 11 production services,
+  which cut manual review effort by 40\%.
+  \item Built a benchmark-curation pipeline over PostgreSQL telemetry and Redis event streams that cut mean
+  time to detect model-quality regressions by 30\%.
+  \item Hardened 47 API endpoints with schema validation, parameterized queries, rate limits and
+  Bandit/pip-audit checks before merge.
+  \item Replaced 11 long-lived secrets with short-lived, scope-limited OIDC tokens and made Trivy image
+  scans a blocking deploy step.
+  \item Deployed evaluation services on AWS (EC2, S3, role-scoped IAM, VPC) behind a load balancer;
+  rollback time fell 35\%.
+\end{itemize}
+\vspace{1pt}
 
-    \resumeSubheading
-      {Freelance Backend Engineer (part-time)}{Mar 2021 -- Jun 2023}
-      {Independent, for small organizations}{Remote}
-      \resumeItemListStart
-        \resumeItem{Built backends on \textbf{FastAPI}, \textbf{Django REST} and \textbf{Spring Boot}, with \textbf{React}/\textbf{Node.js} frontends.}
-        \resumeItem{Engineered a \textbf{multilingual code-search backend} with \textbf{BM25} and \textbf{TF-IDF} retrieval over Python, Java, C++ and Rust corpora, with authorization checked before every query and \textbf{AES-256} tenant-scoped encryption at rest.}
-        \resumeItem{Designed an \textbf{agent-assisted evaluation pipeline} with async Python workers and \textbf{LLM-generated test scaffolds} covering API contract checks, implementation correctness and production monitoring across \textbf{12 services}; throughput rose \textbf{18\%}.}
-        \resumeItem{Built a \textbf{real-time evaluation platform} with PostgreSQL optimistic locking, async orchestration and a \textbf{WebSocket} notification layer; p95 latency fell from \textbf{210\,ms to 48\,ms} under 85 concurrent connections.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-\vspace{-14pt}
+\role{Full Stack Developer}{Mar 2022 -- Jun 2023}{DZ Software Engineering PLC \sep Addis Ababa, Ethiopia}
+\begin{itemize}
+  \item Triaged production incidents across Python, Java and C++ services and wrote runbooks for the
+  ones that kept coming back.
+  \item Automated recurring health checks and set up observability baselines for
+  the services I supported.
+\end{itemize}
+\vspace{1pt}
 
-%-----------PROJECTS-----------
-\section{Projects \normalfont\small (personal, 2026, public on GitHub)}
-  \resumeSubHeadingListStart
-    \item\resumeItemListStart
-      \resumeItem{\textbf{Agent Perimeter} (Apache-2.0) --- \textbf{security scanner for MCP servers and AI agents} in Python: \textbf{34 checks in 8 groups}, \textbf{944 test functions}. Enumerated all \textbf{31,953 MCP Registry entries} and analysed a 377-artifact sample.}
-      \resumeItem{\textbf{Ledger Sense self-audit} --- audited my own invoice pipeline and recorded \textbf{34 findings} (1 Critical, 15 High, 18 Medium); reproduced and fixed the Critical, a cross-tenant export deletion.}
-    \resumeItemListEnd
-  \resumeSubHeadingListEnd
-\vspace{-14pt}
+\role{Freelance Backend Engineer (part-time)}{Mar 2021 -- Jun 2023}{Independent, for small organizations \sep Remote}
+\begin{itemize}
+  \item Built backends with FastAPI, Django REST and Spring Boot.
+\end{itemize}
 
-%-----------SKILLS-----------
+% ---------------- Projects ----------------
+\section{Projects}
+{\small Personal projects, 2026. I design them and direct AI coding agents (Claude Code) that write much of
+the code; I review and test it. Each repo says how it was built and what isn't finished.}
+\begin{itemize}
+  \item \textbf{ShopFast sample audit} (demo, not client work): a Next.js + Supabase + Stripe store with
+  12 planted flaws, each proven and paired with its fix.
+  \item \textbf{Agent Perimeter} (Apache-2.0): security scanner for MCP servers and AI agents with 34 checks
+  and a passive census of 31,953 MCP Registry entries.
+  \item \textbf{Ledger Sense} (Apache-2.0): checks construction pay applications before payment. My own
+  audit of it recorded 34 findings; I reproduced and fixed the Critical one.
+\end{itemize}
+
+% ---------------- Skills ----------------
 \section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{AI \& LLM Systems}{: \textbf{LLM Integration \& Evaluation Pipelines}, \textbf{MCP} (servers, registry, security), Agent Tool-Use Security, Agent-Assisted Workflows, Retrieval (BM25 / TF-IDF), Prompt Engineering, Fine-Tuning Data Curation, Benchmarking} \\
-     \textbf{Languages}{: \textbf{Python}, \textbf{TypeScript}, JavaScript, Java, C++, Rust, SQL} \\
-     \textbf{Backend}{: \textbf{FastAPI}, Django REST, Spring Boot, Node.js, Next.js, SQLAlchemy + Alembic, Async Python, WebSockets, REST API Design, Microservices, Event-Driven Systems} \\
-     \textbf{Data}{: \textbf{PostgreSQL} (incl. row-level security), \textbf{Redis}, SQL Server} \\
-     \textbf{Cloud \& DevOps}{: \textbf{AWS} (EC2, S3, IAM, VPC, ALB), \textbf{Docker} \& Compose, GitHub Actions, CI/CD, Linux, Prometheus / Grafana, ELK} \\
-     \textbf{Security}{: \textbf{Keycloak / OIDC token exchange}, Zero Trust, JWT, RBAC / ABAC, OWASP Top 10, Trivy, Bandit, pip-audit, OpenSCAP} \\
-    }}
- \end{itemize}
- \vspace{-16pt}
+{\small\hyphenpenalty=10000\exhyphenpenalty=10000
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight}p{2.85cm}>{\RaggedRight\arraybackslash}X@{}}
+\textbf{Backend} & Python 3.12 \sep FastAPI \sep Django REST \sep Spring Boot \sep Pydantic v2 \sep SQLAlchemy 2 + Alembic \sep
+PostgreSQL \sep Redis \sep Typer CLI \\[1pt]
+\textbf{App security} & Supabase RLS and Postgres policies (ShopFast) \sep Stripe webhook and checkout checks (ShopFast) \sep
+OIDC / Keycloak, JWT (DZ, AZTDP) \sep RBAC \sep OWASP Top 10 \sep threat modeling \sep SARIF 2.1.0 \sep Argon2 \sep
+Bandit / pip-audit \sep Trivy \sep gitleaks \\[1pt]
+\textbf{Web} & Next.js and TypeScript (ShopFast, Agent Perimeter UI) \sep React \\[1pt]
+\textbf{Infrastructure} & Docker \& Compose \sep GitHub Actions \sep AWS (EC2, S3, IAM, VPC) \sep Linux \sep Prometheus \sep CI/CD gates \\[1pt]
+\textbf{Evaluation} & LLM evaluation pipelines \sep bootstrap confidence intervals \sep judge agreement (Cohen's $\kappa$) \sep
+property-based testing (Hypothesis) \\
+\end{tabularx}
+}
 
-%-----------EDUCATION-----------
+% ---------------- Education ----------------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {B.Sc. Computer Science}{Jan 2021 -- Jul 2026}
-      {HiLCoE School of Computer Science \& Technology}{Addis Ababa, Ethiopia}
-  \resumeSubHeadingListEnd
- \vspace{-30pt}
+\textbf{B.Sc. Computer Science}, HiLCoE School of Computer Science \& Technology, Addis Ababa \hfill{\small 2021 -- 2026}
 
 \end{document}
